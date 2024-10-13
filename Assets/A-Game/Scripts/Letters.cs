@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class Letters : MonoBehaviour
@@ -12,6 +13,7 @@ public class Letters : MonoBehaviour
     private SceneTransitionManager sceneTransitionManager;
     private Action action;
     private Box box;
+    private DataCollector datas;
     #endregion
 
     private bool isDraggable;
@@ -19,9 +21,11 @@ public class Letters : MonoBehaviour
     private bool isOnBox;
     private float gravityScale;
     private bool oneTime = false;
+    private float timer = 0;
 
     private void Start()
     {
+        datas=FindAnyObjectByType<DataCollector>();
         sceneTransitionManager=FindAnyObjectByType<SceneTransitionManager>();
         action=FindAnyObjectByType<Action>();
         box=FindAnyObjectByType<Box>();
@@ -33,11 +37,12 @@ public class Letters : MonoBehaviour
         else
         isDraggable = false;
 
+        timer = 0;
     }
     private void OnMouseDown()
     {
 
-
+        
         if (isDraggable)
         {
             isDragging = true;
@@ -63,6 +68,7 @@ public class Letters : MonoBehaviour
     }
     private void Update()
     {
+        timer += Time.deltaTime;
         if (isDragging)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -75,7 +81,10 @@ public class Letters : MonoBehaviour
         if(!oneTime&&action.didEnd)
         {
             action.isCorrectLetter=false;
+            datas.actionAns[GameManager.Instance.currentIndex] = false;
+            datas.actionTimes[GameManager.Instance.currentIndex] = timer;
             action.revealText();
+            oneTime = true;
         }
             
     }
@@ -89,11 +98,13 @@ public class Letters : MonoBehaviour
             rb.gravityScale = 0f;
             rb.velocity = new(0, 0);
             rb.mass= 0f;
+            //ColorBlock cb;
             sceneTransitionManager.actionSceneConditionMet = true;
             isDraggable =false;
+
             if (!action.oneTime)
             {
-
+                datas.letterChosen[GameManager.Instance.currentIndex] = gameObject.name[0].ToString();
                 action.revealText();
                 action.oneTime = true;
                 VoiceFunction();
@@ -110,7 +121,6 @@ public class Letters : MonoBehaviour
     }
     private void VoiceFunction()
     {
-
         if (action.isCorrectLetter)
         {
             AudioManager.Instance.PlaySFX(AudioManager.Instance.PlacingLetter);

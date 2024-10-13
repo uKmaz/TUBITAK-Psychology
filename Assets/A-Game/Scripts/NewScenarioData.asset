@@ -480,4 +480,371 @@ MonoBehaviour:
   - "Hocan\u0131z hakk\u0131nda bu istenmeyen d\xFC\u015F\xFCncelerden kurtulamazsan\u0131z
     ba\u015F\u0131n\u0131z\u0131n belaya girme ihtimali d\xFC\u015F\xFCk m\xFCd\xFCr?  "
   CheckUpAnswers6: 010001000100010001
-  Scenarios: []
+  demoMainSceneTexts:
+  - Demo Main Scene
+  - Demo Main Scene 2
+  - Demo Main Scene 3
+  - Demo Main Scene 4
+  - Demo Main Scene 5
+  demoActionSceneTexts:
+  - Demo Actio_
+  - Demo Acti_n
+  - Demo Act_on
+  - Demo A_tion
+  - Demo _ction
+  demoActionSceneTrueTexts:
+  - Demo Action
+  - Demo Action
+  - Demo Action
+  - Demo Action
+  - Demo Action
+  demoActionSceneTrueLetter:
+  - n
+  - o
+  - I
+  - c
+  - a
+  demoCheckUpQuestions:
+  - Check1
+  - Check2
+  - Check3
+  - Check4
+  - Check5
+  demoCheckUpAnswers: 0100010001
+  Scenarios:
+  - MainSceneText: "Kald\u0131r\u0131mda k\u0131r\u0131k bir cam par\xE7as\u0131
+      g\xF6r\xFCyorsunuz. Aceleniz var ve onu al\u0131p \xE7\xF6pe atmad\u0131n\u0131z.
+      E\u011Fer birisi bu k\u0131r\u0131k cam par\xE7as\u0131 y\xFCz\xFCnden zarar
+      g\xF6r\xFCrse siz\u2026 "
+    ActionSceneText: "s_\xE7suzsunuzdur. "
+    ActionSceneTrueText: "su\xE7suzsunuzdur. "
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Birisi k\u0131r\u0131k cam par\xE7as\u0131 nedeni ile zarar
+      g\xF6r\xFCrse, bunda sizin bir su\xE7unuz olmayaca\u011F\u0131n\u0131 m\u0131
+      d\xFC\u015F\xFCn\xFCyorsunuz? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Arkada\u015F\u0131n\u0131z i\xE7in s\xFCrpriz bir parti yapmay\u0131
+      planl\u0131yorsunuz. Misafirlere kat\u0131l\u0131m durumlar\u0131n\u0131 bildirmelerini
+      s\xF6ylemeyi unuttunuz, bu y\xFCzden ka\xE7 ki\u015Finin gelece\u011Finden
+      emin olam\u0131yorsunuz. Partiyi d\xFC\u015F\xFCnd\xFCk\xE7e\u2026  "
+    ActionSceneText: "hey_canlan\u0131yorsunuz. "
+    ActionSceneTrueText: "heyecanlan\u0131yorsunuz. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Parti i\xE7in heyecanl\u0131 m\u0131s\u0131n\u0131z? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Son zamanlarda dikkatinizi toplamakta zorlan\u0131yorsunuz. Tuhaf
+      ve rahats\u0131z edici d\xFC\u015F\xFCnceler aniden akl\u0131n\u0131za geliyor.
+      D\xFCzg\xFCn bir insan olarak nitelendirilebilmek i\xE7in d\xFC\u015F\xFCncelerinizi
+      kontrol etmek\u2026 "
+    ActionSceneText: 'ger_ksizdir. '
+    ActionSceneTrueText: 'gereksizdir. '
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Tuhaf d\xFC\u015F\xFCncelerinizi kontrol etme beceriniz, d\xFCzg\xFCn
+      bir insan olup olmad\u0131\u011F\u0131n\u0131zla ilgili midir?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "M\xFCd\xFCr\xFCn\xFCz sizden farkl\u0131 bir \u0131rktan. Onunla
+      ilk tan\u0131\u015Ft\u0131\u011F\u0131n\u0131zda beklenmedik bir \u015Fekilde
+      akl\u0131n\u0131za istenmeyen \u0131rk\xE7\u0131 d\xFC\u015F\xFCnceler gelmeye
+      ba\u015Flad\u0131. Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak\u2026 "
+    ActionSceneText: 'n_rmaldir. '
+    ActionSceneTrueText: 'normaldir. '
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Bu d\xFC\u015F\xFCnceye sahip olmak sizin k\xF6t\xFC bir insan
+      oldu\u011Funuz anlam\u0131na m\u0131 geliyor?   "
+    CheckUpAnswer: 0
+  - MainSceneText: "Yeni bir ili\u015Fkiye ba\u015Fl\u0131yorsunuz. \u0130lk randevunuzda
+      akl\u0131n\u0131za bir tak\u0131m istenmeyen, rahats\u0131z edici d\xFC\u015F\xFCnceler
+      geliyor. Bu d\xFC\u015F\xFCncelerin nas\u0131l kontrol edilece\u011Fini \xF6\u011Frenmek\u2026 "
+    ActionSceneText: 'g_rekmez. '
+    ActionSceneTrueText: 'gerekmez. '
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "\u0130stenmeyen d\xFC\u015F\xFCncelerinizi kontrol etmeniz
+      gerekli midir?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Otobanda araba kullan\u0131yorsunuz ve birden araban\u0131z\u0131
+      bariyerlere \xE7arpt\u0131\u011F\u0131n\u0131z\u0131 d\xFC\u015F\xFCn\xFCyorsunuz.
+      Bu d\xFC\u015F\xFCnce birden ortaya \xE7\u0131kt\u0131 ve bir kayna\u011F\u0131
+      yok. Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak\u2026 "
+    ActionSceneText: 'norm_ldir. '
+    ActionSceneTrueText: 'normaldir. '
+    ActionSceneTrueLetter: a
+    CheckUpQuestion: "Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak normal
+      midir?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Bir hastanede g\xF6n\xFCll\xFC \xE7al\u0131\u015F\u0131yorsunuz.
+      Doktorlardan biri sizden kullan\u0131lm\u0131\u015F birka\xE7 i\u011Fneyi ba\u015Fka
+      bir birime g\xF6t\xFCrmenizi istiyor. Kullan\u0131lm\u0131\u015F i\u011Fnelerden
+      kazara bir hastal\u0131k yay\u0131lma ihtimali\u2026 "
+    ActionSceneText: "d_\u015F\xFCkt\xFCr "
+    ActionSceneTrueText: "d\xFC\u015F\xFCkt\xFCr. "
+    ActionSceneTrueLetter: "\xFC"
+    CheckUpQuestion: "Bir hastal\u0131\u011F\u0131n yay\u0131lmas\u0131na neden olma
+      ihtimaliniz y\xFCksek mi? "
+    CheckUpAnswer: 0
+  - MainSceneText: "Yeni bir araba sat\u0131n almak \xFCzeresiniz.  T\xFCm se\xE7enekleri
+      de\u011Ferlendirdikten sonra, hala iki araba aras\u0131nda kalm\u0131\u015F
+      durumdas\u0131n\u0131z. Son karar\u0131n\u0131z\u0131 sat\u0131c\u0131ya bildirirken\u2026  "
+    ActionSceneText: 'sak_n hissediyorsunuz. '
+    ActionSceneTrueText: 'sakin hissediyorsunuz. '
+    ActionSceneTrueLetter: "\u0130"
+    CheckUpQuestion: "Karar\u0131n\u0131z konusunda endi\u015Feli mi hissediyorsunuz?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Prestijli bir staj program\u0131na ba\u015Fvuruyorsunuz. \xD6zge\xE7mi\u015Finizi
+      haz\u0131rlarken bug\xFCne kadar ba\u015Far\u0131 ile yapt\u0131\u011F\u0131n\u0131z
+      her \u015Feyi yaz\u0131yorsunuz. \xD6zge\xE7mi\u015Finiz m\xFCkemmel olmasa
+      da g\xFC\xE7l\xFC. Bu sizi.. "
+    ActionSceneText: "de\u011F_rli hissettiriyor. "
+    ActionSceneTrueText: "de\u011Ferli hissettiriyor. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "\xD6zge\xE7mi\u015Finizden memnun musunuz? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Bir hastanede g\xF6n\xFCll\xFC \xE7al\u0131\u015F\u0131yorsunuz.
+      Doktorlardan biri sizden kullan\u0131lm\u0131\u015F birka\xE7 i\u011Fneyi ba\u015Fka
+      bir birime g\xF6t\xFCrmenizi istiyor. Kullan\u0131lm\u0131\u015F i\u011Fnelerden
+      kazara bir hastal\u0131k yay\u0131lma ihtimali\u2026 "
+    ActionSceneText: "d_\u015F\xFCkt\xFCr "
+    ActionSceneTrueText: "d\xFC\u015F\xFCkt\xFCr. "
+    ActionSceneTrueLetter: "\xFC"
+    CheckUpQuestion: "Bir hastal\u0131\u011F\u0131n yay\u0131lmas\u0131na neden olma
+      ihtimaliniz y\xFCksek mi? "
+    CheckUpAnswer: 0
+  - MainSceneText: "Arkada\u015F\u0131n\u0131za bazen de\u011Fer verdi\u011Finiz
+      insanlara zarar vermekle ilgili istenmeyen d\xFC\u015F\xFCncelerin akl\u0131n\u0131za
+      geldi\u011Fini s\xF6yl\xFCyorsunuz. Arkada\u015F\u0131n\u0131z size bu tarz
+      istenmeyen d\xFC\u015F\xFCncelere sahip olman\u0131n\u2026  "
+    ActionSceneText: "n_rmal oldu\u011Funu s\xF6yl\xFCyor. "
+    ActionSceneTrueText: "normal oldu\u011Funu s\xF6yl\xFCyor. "
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Arkada\u015F\u0131n\u0131z sizi b\xF6yle bir d\xFC\u015F\xFCnceye
+      sahip oldu\u011Funuz i\xE7in olumsuz bir \u015Fekilde yarg\u0131lar m\u0131?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "M\xFCd\xFCr\xFCn\xFCz sizden farkl\u0131 bir \u0131rktan. Onunla
+      ilk tan\u0131\u015Ft\u0131\u011F\u0131n\u0131zda beklenmedik bir \u015Fekilde
+      akl\u0131n\u0131za istenmeyen \u0131rk\xE7\u0131 d\xFC\u015F\xFCnceler gelmeye
+      ba\u015Flad\u0131. Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak\u2026 "
+    ActionSceneText: 'n_rmaldir. '
+    ActionSceneTrueText: 'normaldir. '
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Bu d\xFC\u015F\xFCnceye sahip olmak sizin k\xF6t\xFC bir insan
+      oldu\u011Funuz anlam\u0131na m\u0131 geliyor?   "
+    CheckUpAnswer: 0
+  - MainSceneText: "Bir oyunun se\xE7melerindesiniz. Repli\u011Finizde yer alan \xE7o\u011Fu
+      c\xFCmleyi do\u011Fru s\xF6ylediniz ama bir iki tanesini kar\u0131\u015Ft\u0131rd\u0131n\u0131z.
+      Se\xE7melerin... "
+    ActionSceneText: "_yi gitti\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueText: "iyi gitti\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueLetter: "\u0130"
+    CheckUpQuestion: "Se\xE7meler k\xF6t\xFC m\xFC ge\xE7ti? "
+    CheckUpAnswer: 0
+  - MainSceneText: "K\xFCt\xFCphanede ders \xE7al\u0131\u015F\u0131rken \xE7al\u0131\u015Fma
+      grubunuzdaki bir arkada\u015F\u0131n\u0131za zarar vermek ile ilgili istenmeyen
+      bir  d\xFC\u015F\xFCnce akl\u0131n\u0131za geliyor. \u0130stenmeyen d\xFC\u015F\xFCncelerinizi
+      kontrol\xFCn\xFCz alt\u0131na alamad\u0131\u011F\u0131n\u0131z i\xE7in k\xF6t\xFC
+      bir olay olma ihtimali\u2026 "
+    ActionSceneText: "d\xFC\u015F_kt\xFCr. "
+    ActionSceneTrueText: "d\xFC\u015F\xFCkt\xFCr. "
+    ActionSceneTrueLetter: "\xFC"
+    CheckUpQuestion: "\u0130stenmeyen d\xFC\u015F\xFCncelerinizi kontrol edemedi\u011Finiz
+      i\xE7in k\xF6t\xFC bir olay olma ihtimali d\xFC\u015F\xFCk m\xFCd\xFCr?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Son zamanlarda dikkatinizi toplamakta zorlan\u0131yorsunuz. Tuhaf
+      ve rahats\u0131z edici d\xFC\u015F\xFCnceler aniden akl\u0131n\u0131za geliyor.
+      D\xFCzg\xFCn bir insan olarak nitelendirilebilmek i\xE7in d\xFC\u015F\xFCncelerinizi
+      kontrol etmek\u2026 "
+    ActionSceneText: 'ger_ksizdir. '
+    ActionSceneTrueText: 'gereksizdir. '
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Tuhaf d\xFC\u015F\xFCncelerinizi kontrol etme beceriniz, d\xFCzg\xFCn
+      bir insan olup olmad\u0131\u011F\u0131n\u0131zla ilgili midir?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Yeni bir araba sat\u0131n almak \xFCzeresiniz.  T\xFCm se\xE7enekleri
+      de\u011Ferlendirdikten sonra, hala iki araba aras\u0131nda kalm\u0131\u015F
+      durumdas\u0131n\u0131z. Son karar\u0131n\u0131z\u0131 sat\u0131c\u0131ya bildirirken\u2026  "
+    ActionSceneText: 'sak_n hissediyorsunuz. '
+    ActionSceneTrueText: 'sakin hissediyorsunuz. '
+    ActionSceneTrueLetter: "\u0130"
+    CheckUpQuestion: "Karar\u0131n\u0131z konusunda endi\u015Feli mi hissediyorsunuz?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Gelecek d\xF6nem psikoloji dersi almay\u0131 planl\u0131yorsunuz.
+      Ancak ders dolu oldu\u011Fu i\xE7in bunun yerine tarih dersine kay\u0131t yapt\u0131r\u0131yorsunuz.
+      Planlamad\u0131\u011F\u0131n\u0131z bu dersin b\xFCy\xFCk ihtimalle\u2026  "
+    ActionSceneText: "h_\u015Funuza gidece\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueText: "ho\u015Funuza gidece\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Tarih dersini almay\u0131 d\xF6rt g\xF6zle bekliyor musunuz?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Bir arkada\u015F\u0131n\u0131z\u0131n \xE7ocu\u011Funa bak\u0131yorsunuz.
+      Bakt\u0131\u011F\u0131n\u0131z \xE7ocuk farkl\u0131 bir mahalledeki parka gitmek
+      istiyor. Sizin hayat\u0131n\u0131zda b\xF6yle s\u0131radan de\u011Fi\u015Fiklik\u2026 "
+    ActionSceneText: "g\xFCv_nlidir. "
+    ActionSceneTrueText: "g\xFCvenlidir. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: 'Bu deneyim tehlikeli mi? '
+    CheckUpAnswer: 0
+  - MainSceneText: "Arkada\u015F\u0131n\u0131za bazen de\u011Fer verdi\u011Finiz
+      insanlara zarar vermekle ilgili istenmeyen d\xFC\u015F\xFCncelerin akl\u0131n\u0131za
+      geldi\u011Fini s\xF6yl\xFCyorsunuz. Arkada\u015F\u0131n\u0131z size bu tarz
+      istenmeyen d\xFC\u015F\xFCncelere sahip olman\u0131n\u2026  "
+    ActionSceneText: "n_rmal oldu\u011Funu s\xF6yl\xFCyor. "
+    ActionSceneTrueText: "normal oldu\u011Funu s\xF6yl\xFCyor. "
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Arkada\u015F\u0131n\u0131z sizi b\xF6yle bir d\xFC\u015F\xFCnceye
+      sahip oldu\u011Funuz i\xE7in olumsuz bir \u015Fekilde yarg\u0131lar m\u0131?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Arkada\u015F\u0131n\u0131z i\xE7in s\xFCrpriz bir parti yapmay\u0131
+      planl\u0131yorsunuz. Misafirlere kat\u0131l\u0131m durumlar\u0131n\u0131 bildirmelerini
+      s\xF6ylemeyi unuttunuz, bu y\xFCzden ka\xE7 ki\u015Finin gelece\u011Finden
+      emin olam\u0131yorsunuz. Partiyi d\xFC\u015F\xFCnd\xFCk\xE7e\u2026  "
+    ActionSceneText: "hey_canlan\u0131yorsunuz. "
+    ActionSceneTrueText: "heyecanlan\u0131yorsunuz. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Parti i\xE7in heyecanl\u0131 m\u0131s\u0131n\u0131z? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Prestijli bir staj program\u0131na ba\u015Fvuruyorsunuz. \xD6zge\xE7mi\u015Finizi
+      haz\u0131rlarken bug\xFCne kadar ba\u015Far\u0131 ile yapt\u0131\u011F\u0131n\u0131z
+      her \u015Feyi yaz\u0131yorsunuz. \xD6zge\xE7mi\u015Finiz m\xFCkemmel olmasa
+      da g\xFC\xE7l\xFC. Bu sizi.. "
+    ActionSceneText: "de\u011F_rli hissettiriyor. "
+    ActionSceneTrueText: "de\u011Ferli hissettiriyor. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "\xD6zge\xE7mi\u015Finizden memnun musunuz? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Arkada\u015F\u0131n\u0131z emniyet kemerini takm\u0131yor ve
+      siz de takmas\u0131n\u0131 s\xF6ylemiyorsunuz. \u0130kiniz bir araba kazas\u0131
+      ge\xE7iriyorsunuz ve arkada\u015F\u0131n\u0131z yaralan\u0131yor. Biliyorsunuz
+      ki siz\u2026 "
+    ActionSceneText: "su\xE7s_zsunuz. "
+    ActionSceneTrueText: "su\xE7suzsunuz. "
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Arkada\u015F\u0131n\u0131z\u0131n yaralanmas\u0131nda k\u0131smen
+      sizin mi su\xE7unuz var? "
+    CheckUpAnswer: 0
+  - MainSceneText: "T\xFCm y\u0131l boyunca bir maratona haz\u0131rland\u0131n\u0131z. 
+      \"Derece\" alamad\u0131n\u0131z ama yar\u0131\u015F g\xFCn\xFCnde ko\u015Fuyu
+      tamamlad\u0131\u011F\u0131n\u0131z s\xFCre ki\u015Fisel olarak bug\xFCne kadar
+      elde etti\u011Finizin en iyisi. Bundan\u2026  "
+    ActionSceneText: 'g_rur duyuyorsunuz. '
+    ActionSceneTrueText: 'gurur duyuyorsunuz. '
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Performans\u0131n\u0131zdan memnun musunuz?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "T\xFCm y\u0131l boyunca bir maratona haz\u0131rland\u0131n\u0131z. 
+      \"Derece\" alamad\u0131n\u0131z ama yar\u0131\u015F g\xFCn\xFCnde ko\u015Fuyu
+      tamamlad\u0131\u011F\u0131n\u0131z s\xFCre ki\u015Fisel olarak bug\xFCne kadar
+      elde etti\u011Finizin en iyisi. Bundan\u2026  "
+    ActionSceneText: 'g_rur duyuyorsunuz. '
+    ActionSceneTrueText: 'gurur duyuyorsunuz. '
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Performans\u0131n\u0131zdan memnun musunuz?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Arkada\u015F\u0131n\u0131z emniyet kemerini takm\u0131yor ve
+      siz de takmas\u0131n\u0131 s\xF6ylemiyorsunuz. \u0130kiniz bir araba kazas\u0131
+      ge\xE7iriyorsunuz ve arkada\u015F\u0131n\u0131z yaralan\u0131yor. Biliyorsunuz
+      ki siz\u2026 "
+    ActionSceneText: "su\xE7s_zsunuz. "
+    ActionSceneTrueText: "su\xE7suzsunuz. "
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Arkada\u015F\u0131n\u0131z\u0131n yaralanmas\u0131nda k\u0131smen
+      sizin mi su\xE7unuz var? "
+    CheckUpAnswer: 0
+  - MainSceneText: "Yeni bir ili\u015Fkiye ba\u015Fl\u0131yorsunuz. \u0130lk randevunuzda
+      akl\u0131n\u0131za bir tak\u0131m istenmeyen, rahats\u0131z edici d\xFC\u015F\xFCnceler
+      geliyor. Bu d\xFC\u015F\xFCncelerin nas\u0131l kontrol edilece\u011Fini \xF6\u011Frenmek\u2026 "
+    ActionSceneText: 'g_rekmez. '
+    ActionSceneTrueText: 'gerekmez. '
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "\u0130stenmeyen d\xFC\u015F\xFCncelerinizi kontrol etmeniz
+      gerekli midir?  "
+    CheckUpAnswer: 0
+  - MainSceneText: "Kald\u0131r\u0131mda k\u0131r\u0131k bir cam par\xE7as\u0131
+      g\xF6r\xFCyorsunuz. Aceleniz var ve onu al\u0131p \xE7\xF6pe atmad\u0131n\u0131z.
+      E\u011Fer birisi bu k\u0131r\u0131k cam par\xE7as\u0131 y\xFCz\xFCnden zarar
+      g\xF6r\xFCrse siz\u2026 "
+    ActionSceneText: "s_\xE7suzsunuzdur. "
+    ActionSceneTrueText: "su\xE7suzsunuzdur. "
+    ActionSceneTrueLetter: u
+    CheckUpQuestion: "Birisi k\u0131r\u0131k cam par\xE7as\u0131 nedeni ile zarar
+      g\xF6r\xFCrse, bunda sizin bir su\xE7unuz olmayaca\u011F\u0131n\u0131 m\u0131
+      d\xFC\u015F\xFCn\xFCyorsunuz? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Otobanda araba kullan\u0131yorsunuz ve birden araban\u0131z\u0131
+      bariyerlere \xE7arpt\u0131\u011F\u0131n\u0131z\u0131 d\xFC\u015F\xFCn\xFCyorsunuz.
+      Bu d\xFC\u015F\xFCnce birden ortaya \xE7\u0131kt\u0131 ve bir kayna\u011F\u0131
+      yok. Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak\u2026 "
+    ActionSceneText: 'norm_ldir. '
+    ActionSceneTrueText: 'normaldir. '
+    ActionSceneTrueLetter: a
+    CheckUpQuestion: "Bu tarz istenmeyen d\xFC\u015F\xFCncelere sahip olmak normal
+      midir?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Kan bankas\u0131na kan ba\u011F\u0131\u015Flamaya karar veriyorsunuz.
+      Kan verece\u011Finiz odan\u0131n etraf\u0131na bak\u0131yorsunuz ve kalabal\u0131k
+      oldu\u011Funu fark ediyorsunuz. Burada kan vermenin\u2026 "
+    ActionSceneText: "g\xFCv_nli oldu\u011Funa karar veriyorsunuz. "
+    ActionSceneTrueText: "g\xFCvenli oldu\u011Funa karar veriyorsunuz."
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Kan bankas\u0131 zarars\u0131z m\u0131? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Kan bankas\u0131na kan ba\u011F\u0131\u015Flamaya karar veriyorsunuz.
+      Kan verece\u011Finiz odan\u0131n etraf\u0131na bak\u0131yorsunuz ve kalabal\u0131k
+      oldu\u011Funu fark ediyorsunuz. Burada kan vermenin\u2026 "
+    ActionSceneText: "g\xFCv_nli oldu\u011Funa karar veriyorsunuz. "
+    ActionSceneTrueText: "g\xFCvenli oldu\u011Funa karar veriyorsunuz."
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: "Kan bankas\u0131 zarars\u0131z m\u0131? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Sizden \u015Firketinizdeki \xE7al\u0131\u015Fanlar i\xE7in bir
+      sa\u011Fl\u0131k hizmeti plan\u0131 se\xE7meniz isteniyor. Planlar\u0131n maliyet
+      ve faydalar\u0131n\u0131 de\u011Ferlendiriyorsunuz. Karar\u0131n\u0131z\u0131n
+      t\xFCm olumsuz sonu\xE7lar\u0131ndan herkesi koruyabilmeniz\u2026 "
+    ActionSceneText: "imk_ns\u0131zd\u0131r. "
+    ActionSceneTrueText: "imkins\u0131zd\u0131r. "
+    ActionSceneTrueLetter: a
+    CheckUpQuestion: "Herkesin t\xFCm olumsuz sonu\xE7lardan korundu\u011Fundan emin
+      olmak imkans\u0131z m\u0131? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Bir arkada\u015F\u0131n\u0131z\u0131n \xE7ocu\u011Funa bak\u0131yorsunuz.
+      Bakt\u0131\u011F\u0131n\u0131z \xE7ocuk farkl\u0131 bir mahalledeki parka gitmek
+      istiyor. Sizin hayat\u0131n\u0131zda b\xF6yle s\u0131radan de\u011Fi\u015Fiklik\u2026 "
+    ActionSceneText: "g\xFCv_nlidir. "
+    ActionSceneTrueText: "g\xFCvenlidir. "
+    ActionSceneTrueLetter: e
+    CheckUpQuestion: 'Bu deneyim tehlikeli mi? '
+    CheckUpAnswer: 0
+  - MainSceneText: "Sizden \u015Firketinizdeki \xE7al\u0131\u015Fanlar i\xE7in bir
+      sa\u011Fl\u0131k hizmeti plan\u0131 se\xE7meniz isteniyor. Planlar\u0131n maliyet
+      ve faydalar\u0131n\u0131 de\u011Ferlendiriyorsunuz. Karar\u0131n\u0131z\u0131n
+      t\xFCm olumsuz sonu\xE7lar\u0131ndan herkesi koruyabilmeniz\u2026 "
+    ActionSceneText: "imk_ns\u0131zd\u0131r. "
+    ActionSceneTrueText: "imkins\u0131zd\u0131r. "
+    ActionSceneTrueLetter: a
+    CheckUpQuestion: "Herkesin t\xFCm olumsuz sonu\xE7lardan korundu\u011Fundan emin
+      olmak imkans\u0131z m\u0131? "
+    CheckUpAnswer: 1
+  - MainSceneText: "Bir oyunun se\xE7melerindesiniz. Repli\u011Finizde yer alan \xE7o\u011Fu
+      c\xFCmleyi do\u011Fru s\xF6ylediniz ama bir iki tanesini kar\u0131\u015Ft\u0131rd\u0131n\u0131z.
+      Se\xE7melerin... "
+    ActionSceneText: "_yi gitti\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueText: "iyi gitti\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueLetter: "\u0130"
+    CheckUpQuestion: "Se\xE7meler k\xF6t\xFC m\xFC ge\xE7ti? "
+    CheckUpAnswer: 0
+  - MainSceneText: "K\xFCt\xFCphanede ders \xE7al\u0131\u015F\u0131rken \xE7al\u0131\u015Fma
+      grubunuzdaki bir arkada\u015F\u0131n\u0131za zarar vermek ile ilgili istenmeyen
+      bir  d\xFC\u015F\xFCnce akl\u0131n\u0131za geliyor. \u0130stenmeyen d\xFC\u015F\xFCncelerinizi
+      kontrol\xFCn\xFCz alt\u0131na alamad\u0131\u011F\u0131n\u0131z i\xE7in k\xF6t\xFC
+      bir olay olma ihtimali\u2026 "
+    ActionSceneText: "d\xFC\u015F_kt\xFCr. "
+    ActionSceneTrueText: "d\xFC\u015F\xFCkt\xFCr. "
+    ActionSceneTrueLetter: "\xFC"
+    CheckUpQuestion: "\u0130stenmeyen d\xFC\u015F\xFCncelerinizi kontrol edemedi\u011Finiz
+      i\xE7in k\xF6t\xFC bir olay olma ihtimali d\xFC\u015F\xFCk m\xFCd\xFCr?  "
+    CheckUpAnswer: 1
+  - MainSceneText: "Gelecek d\xF6nem psikoloji dersi almay\u0131 planl\u0131yorsunuz.
+      Ancak ders dolu oldu\u011Fu i\xE7in bunun yerine tarih dersine kay\u0131t yapt\u0131r\u0131yorsunuz.
+      Planlamad\u0131\u011F\u0131n\u0131z bu dersin b\xFCy\xFCk ihtimalle\u2026  "
+    ActionSceneText: "h_\u015Funuza gidece\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueText: "ho\u015Funuza gidece\u011Fini d\xFC\u015F\xFCn\xFCyorsunuz. "
+    ActionSceneTrueLetter: o
+    CheckUpQuestion: "Tarih dersini almay\u0131 d\xF6rt g\xF6zle bekliyor musunuz?  "
+    CheckUpAnswer: 1

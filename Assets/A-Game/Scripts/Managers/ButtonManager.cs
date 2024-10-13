@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    private DataCollector datas;
     SceneTransitionManager sceneTransitionManager;
     [SerializeField] private ScenarioDatas scenarioData;
     [HideInInspector] public bool oneTime = false;
     [SerializeField] private Button yes;
     [SerializeField] private Button no;
-    ColorBlock colorBlockYes;
-    ColorBlock colorBlockNo;
+
     private void Start()
     {
+        datas=FindAnyObjectByType<DataCollector>();
         sceneTransitionManager=FindAnyObjectByType<SceneTransitionManager>();
         oneTime = false;
-        colorBlockYes = yes.colors;
-        colorBlockNo = no.colors;
 
     }
     private void Update()
@@ -32,20 +32,20 @@ public class ButtonManager : MonoBehaviour
 
     public void yesButtonCheckScene()
     {
-       
+        datas.InputCheckAnswer[GameManager.Instance.currentIndex] = true;
         if(!oneTime)
         {
             if (scenarioData.Scenarios[GameManager.Instance.currentIndex].CheckUpAnswer)
             {
                 GameManager.Instance.score += 10;
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.CorrectClick);
-                colorBlockYes.pressedColor = Color.green;
+                datas.isInputCorrect[GameManager.Instance.currentIndex] = true;
             }
             else
             {
                 GameManager.Instance.score -= 10;
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.WrongClick);
-                colorBlockYes.pressedColor= Color.red;
+                datas.isInputCorrect[GameManager.Instance.currentIndex] = false;
             }
             sceneTransitionManager.checkSceneConditionMet = true;
         }
@@ -53,26 +53,31 @@ public class ButtonManager : MonoBehaviour
     }
     public void noButtonCheckScene()
     {
-        if(!oneTime)
+        datas.InputCheckAnswer[GameManager.Instance.currentIndex] = false;
+        if (!oneTime)
         {
             if (!scenarioData.Scenarios[GameManager.Instance.currentIndex].CheckUpAnswer)
             {
                 GameManager.Instance.score += 10;
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.CorrectClick);
-
+                datas.isInputCorrect[GameManager.Instance.currentIndex] = true;
             }
             else
             {
                 GameManager.Instance.score -= 10;
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.WrongClick);
-                colorBlockNo.pressedColor = Color.red;
-
+                datas.isInputCorrect[GameManager.Instance.currentIndex] = false;
             }
         }
         oneTime = true;
         sceneTransitionManager.checkSceneConditionMet = true;
 
 
+
+    }
+    public void demoButtonMainScene()
+    {
+        sceneTransitionManager.changeDemo(true);
 
     }
 }

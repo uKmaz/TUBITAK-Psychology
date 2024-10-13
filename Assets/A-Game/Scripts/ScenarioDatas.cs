@@ -14,6 +14,15 @@ public class ScenarioData
     public string CheckUpQuestion;
     public bool CheckUpAnswer;
 }
+public class DemoScenarioData
+{
+    public string DemoMainText;
+    public string DemoActionText;
+    public string DemoActionTrueText;
+    public string DemoActionTrueLetter;
+    public string DemoCheckQuestion;
+    public bool DemoCheckAnswer;
+}
 
 [CreateAssetMenu(fileName = "NewScenarioData", menuName = "ScriptableObject/ScenarioDatas", order = 1)]
 public class ScenarioDatas : ScriptableObject
@@ -67,9 +76,18 @@ public class ScenarioDatas : ScriptableObject
     public string[] CheckUpQuestions6;
     public bool[] CheckUpAnswers6;
     #endregion
-
+    #region DEMO DATAS
+    [Header("----  DEMO  ----")]
+    public string[] demoMainSceneTexts;
+    public string[] demoActionSceneTexts;
+    public string[] demoActionSceneTrueTexts;
+    public string[] demoActionSceneTrueLetter;
+    public string[] demoCheckUpQuestions;
+    public bool[] demoCheckUpAnswers;
+    #endregion
     #region OUTPUT DATAS
     [HideInInspector] public List<ScenarioData> Scenarios = new List<ScenarioData>();
+    [HideInInspector] public List<DemoScenarioData> DemoScenarios = new List<DemoScenarioData>();
     #endregion
 
     #region Functions
@@ -132,6 +150,29 @@ public class ScenarioDatas : ScriptableObject
             Scenarios.Add(scenario1);
             Scenarios.Add(scenario2);
         }
+    }
+    public void initializeDemo()
+    {
+        fillDemo(demoMainSceneTexts, demoActionSceneTexts, demoActionSceneTrueTexts, demoActionSceneTrueLetter, demoCheckUpQuestions, demoCheckUpAnswers);
+    }
+    private void fillDemo(string[] sourceMain, string[] sourceAction, string[] sourceActionTrue, string[] sourceTrueLetter, string[] sourceCheckUpQ, bool[] sourceCheckUpA)
+    {
+        
+        for (int index=0;index<sourceMain.Count();index++)
+        {
+            DemoScenarioData demo = new DemoScenarioData
+            {
+                DemoMainText = sourceMain[index],
+                DemoActionText = sourceAction[index],
+                DemoActionTrueText = sourceActionTrue[index],
+                DemoActionTrueLetter = sourceTrueLetter[index],
+                DemoCheckQuestion = sourceCheckUpQ[index],
+                DemoCheckAnswer = sourceCheckUpA[index]
+            };
+            DemoScenarios.Add(demo);
+        }
+            
+        
     }
 
     private void ShuffleList(List<ScenarioData> list)

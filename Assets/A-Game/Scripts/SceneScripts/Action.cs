@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
+    private DataCollector datas;
     [SerializeField] private ScenarioDatas scenarioData;
+    
     private Box box;
     #region Texts
     [SerializeField] private TextMeshProUGUI textUGUI;
@@ -21,15 +23,21 @@ public class Action : MonoBehaviour
     private List<GameObject> spawnedLetters = new List<GameObject>();
     [SerializeField] private GameObject Spawnpoint1;
     [SerializeField] private GameObject Spawnpoint2;
-
+    
     #endregion
+
     [HideInInspector] public bool oneTime;
     [HideInInspector] public bool isCorrectLetter;
     [HideInInspector] public bool isDraggingForBox = false;
     [HideInInspector] public bool didEnd;
+    private float timer;
+
     private void Update()
     {
         scoreUGUI.text = GameManager.Instance.score.ToString();
+
+        collectData();
+
         // Harflerin ekranın dışına düşüp düşmediğini kontrol et
         for (int i = spawnedLetters.Count - 1; i >= 0; i--)
         {
@@ -44,13 +52,13 @@ public class Action : MonoBehaviour
                 GameObject letterObj = spawnedLetters[i];
                 spawnedLetters.RemoveAt(i);
                 Destroy(letterObj);
-                if (spawnedLetters.Count <= 0)
-                {
-                    didEnd = true;
-                }
+               
                 
             }
-
+            if (spawnedLetters.Count <= 0)
+            {
+                didEnd = true;
+            }
 
 
         }
@@ -87,6 +95,7 @@ public class Action : MonoBehaviour
         letterDict.Add('V', letters[26]);
         letterDict.Add('Y', letters[27]);
         letterDict.Add('Z', letters[28]);
+        datas = FindAnyObjectByType<DataCollector>();
         box = FindAnyObjectByType<Box>();
         // Scriptable Object'ten veri alımı
         missingText = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneText;
@@ -97,6 +106,7 @@ public class Action : MonoBehaviour
         isCorrectLetter = false;
         oneTime = false;
         spawnedLetters.Clear();
+        timer = 0f;
     }
     IEnumerator SpawnLetters()
     {
@@ -159,11 +169,23 @@ public class Action : MonoBehaviour
             }
             else
             {
-                textUGUI.color = Color.green;
+                textUGUI.color = Color.cyan;
             }
-            textUGUI.text = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneTrueText.ToUpper();
+            textUGUI.text = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneTrueText;
            
             
+        }
+    }
+    public void collectData()
+    {
+        if (!didEnd)
+        {
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            datas.actionTimes[GameManager.Instance.currentIndex] = timer;
+            datas.actionAns[GameManager.Instance.currentIndex] = isCorrectLetter;
         }
     }
 }

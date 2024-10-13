@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b566197b87d243d428ed1fce12811fd2, type: 3}
+  m_Name: NewScenarioData2
+  m_EditorClassIdentifier: 
+  image1NonFixed:
+  - {fileID: 868669329956774760, guid: 06c1b5bb84481704f9b815a890045ece, type: 3}
+  - {fileID: 868669329956774760, guid: 99ae6b0b8d81bdd489ebca7fa3089195, type: 3}
+  - {fileID: 868669329956774760, guid: adb37ddb148cb0645a773313e1682cbc, type: 3}
+  - {fileID: 868669329956774760, guid: 45bc49e553b967247bfb51e4f2eb8139, type: 3}
+  - {fileID: 868669329956774760, guid: 6aba8b418e058b043b200a8809d3091a, type: 3}
+  - {fileID: 3962478596287344014, guid: eb1512ca584906d4b8387ca56797a826, type: 3}
+  - {fileID: 2673490195670432697, guid: 790b26b0982e0ee409c0de700eab70f1, type: 3}
+  - {fileID: 7781020387977682598, guid: 1a0c9ccad2752dd4cae2aabf62690106, type: 3}
+  - {fileID: 7684885130116430973, guid: f8159eb0a2a2b324293fd824134eaa51, type: 3}
+  - {fileID: 4583284176203969220, guid: 163699112528fcd4fa844b006b587685, type: 3}
+  - {fileID: 8105637749782592627, guid: 7b34928551b8a9949817889b0470f85c, type: 3}
+  - {fileID: 7000541085548208630, guid: a01088f714146e047bbce3533aeda98e, type: 3}
+  image2NonFixed:
+  - {fileID: 868669329956774760, guid: 64460a6da4519bc4391cf947d995e69d, type: 3}
+  - {fileID: 868669329956774760, guid: 3985338b79ad7084993f2ef488a8168e, type: 3}
+  - {fileID: 868669329956774760, guid: 067569d6a2a93524e9dd07b06955d552, type: 3}
+  - {fileID: 868669329956774760, guid: 42d7a3d28c50043429af7393932006f0, type: 3}
+  - {fileID: 868669329956774760, guid: 9e7c19c4eca3dc14fb8f22f2ec76954c, type: 3}
+  - {fileID: 9034447589628592956, guid: ae429cb1413183b409bb55b7f672c533, type: 3}
+  - {fileID: 6620548830504072690, guid: c04a620d42c9d12419de70232c8e7401, type: 3}
+  - {fileID: 2819704386812929367, guid: f9aa94f0cadba3549bd9d9780fd1fbd3, type: 3}
+  - {fileID: 3643830470557015257, guid: b7789fad3af2ae74cb9041f9f905ca6e, type: 3}
+  - {fileID: 3005631519714311150, guid: 1e31324b68edeac4395bbc66ce03d7f8, type: 3}
+  - {fileID: 8800543414306430258, guid: 7f785af5d5ba76848821714a31af93ec, type: 3}
+  - {fileID: 5488911697871424364, guid: 8d2bcd8b8fa83e3479234333fc8e9ccb, type: 3}
+  currentSceneCount: 0

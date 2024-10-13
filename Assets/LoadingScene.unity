@@ -167,14 +167,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c41552a7e8ab884e849f0b070935210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuWaitTime: 3
+  time: 
+  mainMenuWaitTime: 60
   mainSceneWaitTime: 20
   actionSceneWaitTime: 20
   checkSceneWaitTime: 20
+  bGameInfoWaitTime: 30
+  focusSceneWaitTime: 30
+  imageSceneWaitTime: 30
+  gameSceneWaitTime: 30
   transitionWaitTime: 15
   scenarioData: {fileID: 11400000, guid: c3112e670e6e1f44189212efbc8be697, type: 2}
+  scenarioData2: {fileID: 11400000, guid: 4164bab8a839cf34fb6d09cc90421500, type: 2}
   actionSceneConditionMet: 0
   checkSceneConditionMet: 0
+  mainMenu: {fileID: 0}
+  elapsedTime: 0
 --- !u!1 &1641894574
 GameObject:
   m_ObjectHideFlags: 0
