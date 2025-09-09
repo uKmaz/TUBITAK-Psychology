@@ -13,6 +13,7 @@ public class ScenarioData
     public string ActionSceneTrueLetter;
     public string CheckUpQuestion;
     public bool CheckUpAnswer;
+    public string Type;
 }
 public class DemoScenarioData
 {
@@ -22,6 +23,17 @@ public class DemoScenarioData
     public string DemoActionTrueLetter;
     public string DemoCheckQuestion;
     public bool DemoCheckAnswer;
+
+}
+public class PracticeScenarioData
+{
+    public string PracticeMainText;
+    public string PracticeActionText;
+    public string PracticeActionTrueText;
+    public string PracticeActionTrueLetter;
+    public string PracticeCheckQuestion;
+    public bool PracticeCheckAnswer;
+
 }
 
 [CreateAssetMenu(fileName = "NewScenarioData", menuName = "ScriptableObject/ScenarioDatas", order = 1)]
@@ -35,6 +47,7 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter1;
     public string[] CheckUpQuestions1;
     public bool[] CheckUpAnswers1;
+    public string Type1 = "Abartılı Tehdit Algısı";
 
     [Header("----Abartılı Sorumluluk----")]
     public string[] MainSceneTexts2;
@@ -43,6 +56,8 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter2;
     public string[] CheckUpQuestions2;
     public bool[] CheckUpAnswers2;
+    public string Type2 = "Abartılı Sorumluluk";
+
 
     [Header("----Mükemmelliyetçilik----")]
     public string[] MainSceneTexts3;
@@ -51,6 +66,8 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter3;
     public string[] CheckUpQuestions3;
     public bool[] CheckUpAnswers3;
+    public string Type3 = "Mükemmelliyetçilik";
+
 
     [Header("----Belirsizliğe Tahammülsüzlük----")]
     public string[] MainSceneTexts4;
@@ -59,6 +76,8 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter4;
     public string[] CheckUpQuestions4;
     public bool[] CheckUpAnswers4;
+    public string Type4 = "Belirsizliğe Tahammülsüzlük";
+
 
     [Header("----Düşüncelerin Aşırı Önemsenmesi----")]
     public string[] MainSceneTexts5;
@@ -67,6 +86,7 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter5;
     public string[] CheckUpQuestions5;
     public bool[] CheckUpAnswers5;
+    public string Type5 = "Düşüncelerin Aşırı Önemsenmesi";
 
     [Header("----Düşünce Kontrolünün Önemsenmesi----")]
     public string[] MainSceneTexts6;
@@ -75,6 +95,7 @@ public class ScenarioDatas : ScriptableObject
     public string[] ActionSceneTrueLetter6;
     public string[] CheckUpQuestions6;
     public bool[] CheckUpAnswers6;
+    public string Type6 = "Düşünce Kontrolünün Önemsenmesi";
     #endregion
     #region DEMO DATAS
     [Header("----  DEMO  ----")]
@@ -84,10 +105,12 @@ public class ScenarioDatas : ScriptableObject
     public string[] demoActionSceneTrueLetter;
     public string[] demoCheckUpQuestions;
     public bool[] demoCheckUpAnswers;
+    public string demoType = "NÖTR";
     #endregion
     #region OUTPUT DATAS
     [HideInInspector] public List<ScenarioData> Scenarios = new List<ScenarioData>();
     [HideInInspector] public List<DemoScenarioData> DemoScenarios = new List<DemoScenarioData>();
+
     #endregion
 
     #region Functions
@@ -104,18 +127,18 @@ public class ScenarioDatas : ScriptableObject
             int[] randomIndices5 = GetRandomIndices(MainSceneTexts5.Length, 3);
             int[] randomIndices6 = GetRandomIndices(MainSceneTexts6.Length, 3);
 
-            FillData(MainSceneTexts1, ActionSceneTexts1, ActionSceneTrueTexts1, ActionSceneTrueLetter1, CheckUpQuestions1, CheckUpAnswers1, randomIndices1);
-            FillData(MainSceneTexts2, ActionSceneTexts2, ActionSceneTrueTexts2, ActionSceneTrueLetter2, CheckUpQuestions2, CheckUpAnswers2, randomIndices2);
-            FillData(MainSceneTexts3, ActionSceneTexts3, ActionSceneTrueTexts3, ActionSceneTrueLetter3, CheckUpQuestions3, CheckUpAnswers3, randomIndices3);
-            FillData(MainSceneTexts4, ActionSceneTexts4, ActionSceneTrueTexts4, ActionSceneTrueLetter4, CheckUpQuestions4, CheckUpAnswers4, randomIndices4);
-            FillData(MainSceneTexts5, ActionSceneTexts5, ActionSceneTrueTexts5, ActionSceneTrueLetter5, CheckUpQuestions5, CheckUpAnswers5, randomIndices5);
-            FillData(MainSceneTexts6, ActionSceneTexts6, ActionSceneTrueTexts6, ActionSceneTrueLetter6, CheckUpQuestions6, CheckUpAnswers6, randomIndices6);
+            FillData(MainSceneTexts1, ActionSceneTexts1, ActionSceneTrueTexts1, ActionSceneTrueLetter1, CheckUpQuestions1, CheckUpAnswers1, randomIndices1, Type1);
+            FillData(MainSceneTexts2, ActionSceneTexts2, ActionSceneTrueTexts2, ActionSceneTrueLetter2, CheckUpQuestions2, CheckUpAnswers2, randomIndices2, Type2);
+            FillData(MainSceneTexts3, ActionSceneTexts3, ActionSceneTrueTexts3, ActionSceneTrueLetter3, CheckUpQuestions3, CheckUpAnswers3, randomIndices3, Type3);
+            FillData(MainSceneTexts4, ActionSceneTexts4, ActionSceneTrueTexts4, ActionSceneTrueLetter4, CheckUpQuestions4, CheckUpAnswers4, randomIndices4, Type4);
+            FillData(MainSceneTexts5, ActionSceneTexts5, ActionSceneTrueTexts5, ActionSceneTrueLetter5, CheckUpQuestions5, CheckUpAnswers5, randomIndices5, Type5);
+            FillData(MainSceneTexts6, ActionSceneTexts6, ActionSceneTrueTexts6, ActionSceneTrueLetter6, CheckUpQuestions6, CheckUpAnswers6, randomIndices6, Type6);
 
             ShuffleList(Scenarios);
 
             balance = CheckQ_Balance();
         }
-        
+
     }
 
     private int[] GetRandomIndices(int length, int count)
@@ -123,10 +146,12 @@ public class ScenarioDatas : ScriptableObject
         return Enumerable.Range(0, length).OrderBy(x => Random.value).Take(count).ToArray();
     }
 
-    private void FillData(string[] sourceMain, string[] sourceAction, string[] sourceActionTrue, string[] sourceTrueLetter, string[] sourceCheckUpQ, bool[] sourceCheckUpA, int[] randomIndices)
+    private void FillData(string[] sourceMain, string[] sourceAction, string[] sourceActionTrue, string[] sourceTrueLetter, string[] sourceCheckUpQ, bool[] sourceCheckUpA, int[] randomIndices, string sourceType)
     {
+
         foreach (int index in randomIndices)
         {
+
             ScenarioData scenario1 = new ScenarioData
             {
                 MainSceneText = sourceMain[index],
@@ -134,7 +159,8 @@ public class ScenarioDatas : ScriptableObject
                 ActionSceneTrueText = sourceActionTrue[index],
                 ActionSceneTrueLetter = sourceTrueLetter[index],
                 CheckUpQuestion = sourceCheckUpQ[index],
-                CheckUpAnswer = sourceCheckUpA[index]
+                CheckUpAnswer = sourceCheckUpA[index],
+                Type = sourceType
             };
 
             ScenarioData scenario2 = new ScenarioData
@@ -144,7 +170,9 @@ public class ScenarioDatas : ScriptableObject
                 ActionSceneTrueText = sourceActionTrue[index],
                 ActionSceneTrueLetter = sourceTrueLetter[index],
                 CheckUpQuestion = sourceCheckUpQ[index],
-                CheckUpAnswer = sourceCheckUpA[index]
+                CheckUpAnswer = sourceCheckUpA[index],
+                Type = sourceType
+
             };
 
             Scenarios.Add(scenario1);

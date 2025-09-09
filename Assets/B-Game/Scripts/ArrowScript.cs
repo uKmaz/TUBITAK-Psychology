@@ -7,8 +7,13 @@ public class ArrowScript : MonoBehaviour
     [SerializeField] private float velocity = 5f;
     private bool clicked = false;
 
+    private void Start()
+    {
+        GameManager.Instance.arrowClickedOnce = false;
+    }
     void Update()
     {
+
         if (clicked)
         {
             // Move the arrow continuously to the left
@@ -18,6 +23,11 @@ public class ArrowScript : MonoBehaviour
 
     private void OnMouseDown()  
     {
-        clicked = true;  // Start moving the arrow on click
+        if(!GameManager.Instance.arrowClickedOnce)
+        {
+            GameManager.Instance.arrowClickedOnce = true;
+            clicked = true;  // Start moving the arrow on click
+        }
+
     }
 }

@@ -6,22 +6,40 @@ public class Box : MonoBehaviour
 {
     [HideInInspector] public bool onBox = false;
     Action action;
+    DemoAction demoAction;
     private void Start()
     {
         action=FindAnyObjectByType<Action>();
+        demoAction = FindAnyObjectByType<DemoAction>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Letter")&&action.isDraggingForBox)
+        if(action != null)
         {
-            onBox = true;
-            
+            if (other.CompareTag("Letter") && action.isDraggingForBox)
+            {
+                onBox = true;
+
+            }
+            else
+            {
+                onBox = false;
+            }
         }
         else
         {
-            onBox = false;
+            if (other.CompareTag("Letter") && demoAction.isDraggingForBox)
+            {
+                onBox = true;
+
+            }
+            else
+            {
+                onBox = false;
+            }
         }
+
 
     }
 }

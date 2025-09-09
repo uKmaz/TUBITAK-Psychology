@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TypeWriter : MonoBehaviour
 {
+    /*
     public TextMeshProUGUI textToDisplay;
 
     public float typingSpeed = 0.05f;
@@ -52,5 +53,5 @@ public class TypeWriter : MonoBehaviour
         {
             skipTyping = true;
         }
-    }
+    }*/
 }

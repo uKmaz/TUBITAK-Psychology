@@ -29,17 +29,27 @@ public class Action : MonoBehaviour
     [HideInInspector] public bool oneTime;
     [HideInInspector] public bool isCorrectLetter;
     [HideInInspector] public bool isDraggingForBox = false;
+    private bool didStart;
     [HideInInspector] public bool didEnd;
     private float timer;
 
     private void Update()
     {
+
         scoreUGUI.text = GameManager.Instance.score.ToString();
 
         collectData();
+        timer += Time.deltaTime;
+        if(timer > 6f)
+        {
+            if (!didStart)
+            {
+                StartCoroutine(SpawnLetters());
+                didStart = true;
+            }
 
-        // Harflerin ekranın dışına düşüp düşmediğini kontrol et
-        for (int i = spawnedLetters.Count - 1; i >= 0; i--)
+            // Harflerin ekranın dışına düşüp düşmediğini kontrol et
+            for (int i = spawnedLetters.Count - 1; i >= 0; i--)
         {
             if (spawnedLetters[i] == null)
             {
@@ -58,6 +68,7 @@ public class Action : MonoBehaviour
             if (spawnedLetters.Count <= 0)
             {
                 didEnd = true;
+            }
             }
 
 
@@ -101,9 +112,9 @@ public class Action : MonoBehaviour
         missingText = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneText;
         trueText = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneTrueText;
         trueLetter = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneTrueLetter.ToUpper()[0];
-        StartCoroutine(SpawnLetters());
         // Initialization
         isCorrectLetter = false;
+        didStart= false;
         oneTime = false;
         spawnedLetters.Clear();
         timer = 0f;
@@ -136,28 +147,68 @@ public class Action : MonoBehaviour
         }
 
         // Harfleri yarat ve sahneye yerleştir
+        List<Vector2> usedPositions = new List<Vector2>(); // Önceden kullanılan koordinatlar
+        float minDistance = 0.5f; // İki harf arasında olması gereken minimum mesafe
+
         for (int i = 0; i < lettersList.Count; i++)
         {
-                char letter = lettersList[i];
+            char letter = lettersList[i];
+            bool isPositionValid;
+
+            int maxAttempts = 100;
+            int attemptCount = 0;
+
             do
             {
-                spawnRange = new Vector2(Random.Range(Spawnpoint1.transform.position.x, Spawnpoint2.transform.position.x), Spawnpoint1.transform.position.y);
+                isPositionValid = true;
 
-            }
-            while (!(spawnRange.x > 0.83 || spawnRange.x < -0.77));
+                spawnRange = new Vector2(
+                    Random.Range(Spawnpoint1.transform.position.x, Spawnpoint2.transform.position.x),
+                    Spawnpoint1.transform.position.y
+                );
 
-                GameObject letterObj;
-
-                if (letterDict.TryGetValue(letter, out letterObj))
+                if (!(spawnRange.x > 0.83f || spawnRange.x < -0.77f))
                 {
-                    letterObj = Instantiate(letterObj, spawnRange, Quaternion.identity);
-                    spawnedLetters.Add(letterObj);
+                    isPositionValid = false;
+                    continue;
                 }
 
-                yield return new WaitForSeconds(0.5f);
-            
+                foreach (Vector2 pos in usedPositions)
+                {
+                    if (Vector2.Distance(pos, spawnRange) < minDistance)
+                    {
+                        isPositionValid = false;
+                        break;
+                    }
+                }
+
+                attemptCount++;
+                if (attemptCount >= maxAttempts)
+                {
+                    Debug.LogWarning("Max attempts reached for finding a valid position.");
+                    break;
+                }
+            }
+            while (!isPositionValid);
+
+
+            // Yeni pozisyonu listeye ekle
+            usedPositions.Add(spawnRange);
+
+            GameObject letterObj;
+
+            if (letterDict.TryGetValue(letter, out letterObj))
+            {
+                // Harfi oluştur ve sahneye ekle
+                letterObj = Instantiate(letterObj, spawnRange, Quaternion.identity);
+                spawnedLetters.Add(letterObj);
+            }
+
+            yield return new WaitForSeconds(0.5f); // Yarım saniye bekle
         }
-        
+
+
+
     }
     public void revealText()
     {
@@ -169,8 +220,10 @@ public class Action : MonoBehaviour
             }
             else
             {
-                textUGUI.color = Color.cyan;
+                textUGUI.color = Color.green;
             }
+            datas=FindAnyObjectByType<DataCollector>();
+            datas.actionTimes[GameManager.Instance.currentIndex]= timer;
             textUGUI.text = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneTrueText;
            
             

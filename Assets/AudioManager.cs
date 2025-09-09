@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
     [Header("---------Audio Clip-----------")]
-    public AudioClip background;
+   // public AudioClip background;
     public AudioClip buttonPress;
     public AudioClip CorrectClick;
     public AudioClip WrongClick;
@@ -32,23 +32,18 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        musicSource.clip = background;
-        musicSource.Play();
+        /*musicSource.clip = background;
+        musicSource.Play();*/
     }
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
     }
-    private void Update()
+    public void balloonPop()
     {
-        if (GameManager.Instance.balloonPopped)
-        {
-            SFXSource.PlayOneShot(BalloonPop);
-            GameManager.Instance.balloonPopped = false;
-            GameManager.Instance.balloonPoppedToPass = true;
-
-        }
+        SFXSource.PlayOneShot(BalloonPop);
+        GameManager.Instance.balloonPopped = false;
+        GameManager.Instance.balloonPoppedToPass = true;
     }
-
 
 }

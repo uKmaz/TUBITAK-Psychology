@@ -10,7 +10,7 @@ public class ImageManager : MonoBehaviour
     [SerializeField] private ScenarioDatas2 scenarioDatas2;
     private void Start()
     {
-            image1.sprite = scenarioDatas2.ImagePairs[GameManager.Instance.currentIndex].image1.sprite;
-            image2.sprite = scenarioDatas2.ImagePairs[GameManager.Instance.currentIndex].image2.sprite;
+        image1.sprite = scenarioDatas2.ImagePairs[GameManager.Instance.currentIndex].image1.sprite;
+        image2.sprite = scenarioDatas2.ImagePairs[GameManager.Instance.currentIndex].image2.sprite;
     }
 }

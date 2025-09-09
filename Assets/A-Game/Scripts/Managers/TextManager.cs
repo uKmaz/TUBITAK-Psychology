@@ -7,21 +7,36 @@ using UnityEngine.SceneManagement;
 public class TextManager : MonoBehaviour
 {
     [SerializeField] private ScenarioDatas scenarioData;
+    [SerializeField] private TextMeshProUGUI text;
+    private Action action;
+    private DemoAction demoAction;
+    /*
     public TypeWriter typeWrite;
     public TextMeshProUGUI[] textElements;
     private string[] texts=new string[1];
     private int currentIndex = 0;
-
+    */
+    [SerializeField]
     void Start()
     {
-        
-        for (int i = 0; i < textElements.Length; i++)
+        action = FindAnyObjectByType<Action>();
+        if(action != null)
+        {
+            text.text = scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneText;
+        }
+        else
+        {
+            demoAction = FindAnyObjectByType<DemoAction>();
+            text.text = scenarioData.DemoScenarios[GameManager.Instance.currentIndex].DemoActionText;
+        }
+        /*for (int i = 0; i < textElements.Length; i++)
         {
             texts[i]= scenarioData.Scenarios[GameManager.Instance.currentIndex].ActionSceneText;
         }
          
-        ShowNextText();
+        ShowNextText();*/
     }
+    /*
     private void Update()
     {
         if (typeWrite.IsDone())
@@ -43,4 +58,5 @@ public class TextManager : MonoBehaviour
 
 
     }
+    */
 }
