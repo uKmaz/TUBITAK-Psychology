@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int BgameCount;
     public TextMeshProUGUI[] textMeshes;
     private DataCollector collector;
-    private SceneTransitionManager sceneTransitionManager;
     
     public void Scoreboard()
     {
@@ -97,7 +96,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        sceneTransitionManager=FindAnyObjectByType<SceneTransitionManager>();
         AgameCount = 0;
         BgameCount = 0;
         arrowClickedOnce = false;

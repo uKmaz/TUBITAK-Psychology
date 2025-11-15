@@ -65,7 +65,6 @@ public class DataCollector : MonoBehaviour
 
     public void Start()
     {
-
         mainMenu = FindAnyObjectByType<MainMenu>();
         STM=FindAnyObjectByType<SceneTransitionManager>();
         userInput.ActivateInputField();
@@ -174,8 +173,7 @@ public class DataCollector : MonoBehaviour
         }
         Debug.Log("CSV dosyası başarıyla oluşturuldu: " + filePath);
 
-        // E-posta gönder               
-        SendEmailWithAttachment("dusuncelerinihafiflet@gmail.com");
+        FindAnyObjectByType<FirebaseCSVUploader>().UploadCSV(filePath);
     }
 
     private void SendEmailWithAttachment(string recipientEmail)
@@ -184,7 +182,6 @@ public class DataCollector : MonoBehaviour
         {
             try
             {
-                // E-posta ayarları
                 string senderEmail = "mail.senderemre@gmail.com";
                 string senderPassword = "uvzrnlmasznoevfv";
                 string smtpServer = "smtp.gmail.com";

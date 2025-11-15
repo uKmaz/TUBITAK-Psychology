@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LoadingScene.unity
     guid: 4bc6d981b36ec80488ba1e6ae56a6b02
-  - enabled: 1
+  - enabled: 0
     path: Assets/PreGame.unity
     guid: 217b1e3153ce0574b9340319545c6427
   - enabled: 1
@@ -16,11 +16,11 @@ EditorBuildSettings:
     guid: 55d4f6053654a504ba0787376a0b0355
   - enabled: 1
     path: Assets/GeneralScenes/MainMenu.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 1
+    guid: b5ba0a29ff91aec4d8dccbdc7f2f0f9e
+  - enabled: 0
     path: Assets/GeneralScenes/DEMOTOMAIN.unity
-    guid: d0869aac73481a74aa20e9969312cbb3
-  - enabled: 1
+    guid: 01669ab0769abd942904aced3987aa2b
+  - enabled: 0
     path: Assets/DemoScenes/DemoEnd.unity
     guid: 06439d92263c42f46b9dff40640b4b09
   - enabled: 1
@@ -34,7 +34,7 @@ EditorBuildSettings:
     guid: 7b7d44ce6eed8914892cc2c870a2a0b6
   - enabled: 1
     path: Assets/GeneralScenes/Transition.unity
-    guid: 54c955d04f4a44d43b2b2100ba05f7c0
+    guid: c0dc682d6aa1ce046bfd4378823c281c
   - enabled: 1
     path: Assets/GeneralScenes/EndScene.unity
     guid: 9e9583f281db76d4f859dbebbd003c13
@@ -62,19 +62,19 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/A-Game/Scenes/AGameInfo2Al\u0131\u015Ft\u0131rma.unity"
     guid: 0331a9c074d20c446bf29ca671ae8625
-  - enabled: 1
+  - enabled: 0
     path: Assets/DemoScenes/DemoMain.unity
     guid: 64c357357ef68f34bb9513c0951b271f
-  - enabled: 1
+  - enabled: 0
     path: Assets/DemoScenes/DemoAction.unity
     guid: 9a8d1bb8a26f25f4d98d592fcbe3a6c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/DemoScenes/AGameInfo2DEMO.unity
     guid: ca8cc5ec6c5edb64ba7ef3ef958000c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/DemoScenes/DemoCheck.unity
     guid: cf285e4b9b6d7ff4085ba01617eef41e
-  - enabled: 1
+  - enabled: 0
     path: Assets/DemoScenes/DemoCheckAnswer.unity
     guid: 44a2cbacb3486544c885839ddbf4d822
   - enabled: 1

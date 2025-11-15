@@ -67,9 +67,9 @@ public class SceneTransitionManager : MonoBehaviour
         //gameSelection=true;
         //StartCoroutine(HandleSceneTransitionsB());
         //gameSelection = false;
-        StartCoroutine(DemoA());
-        demo = true;
-        //StartCoroutine(dataTest());
+        //StartCoroutine(DemoA());
+        //demo = true;
+        StartCoroutine(dataTest());
 
     }
 
