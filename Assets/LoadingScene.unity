@@ -360,10 +360,24 @@ MonoBehaviour:
   actionSceneWaitTime: 20
   checkSceneWaitTime: 12.5
   bGameInfoWaitTime: 20
+<<<<<<< Updated upstream
   focusSceneWaitTime: 3
   imageSceneWaitTime: 1
   gameSceneWaitTime: 3600
   transitionWaitTime: 2
+=======
+<<<<<<< HEAD
+  focusSceneWaitTime: 0.72
+  imageSceneWaitTime: 1.5
+  gameSceneWaitTime: 3600
+  transitionWaitTime: 1.5
+=======
+  focusSceneWaitTime: 3
+  imageSceneWaitTime: 1
+  gameSceneWaitTime: 3600
+  transitionWaitTime: 2
+>>>>>>> 3daa90f32dd1895c5d50ff3d28aee09aa222b38a
+>>>>>>> Stashed changes
   scenarioData: {fileID: 11400000, guid: c3112e670e6e1f44189212efbc8be697, type: 2}
   scenarioData2: {fileID: 11400000, guid: 4164bab8a839cf34fb6d09cc90421500, type: 2}
   actionSceneConditionMet: 0

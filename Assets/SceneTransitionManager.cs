@@ -51,7 +51,7 @@ public class SceneTransitionManager : MonoBehaviour
         {
             tempOturumSayisi = 1;
             PlayerPrefs.SetInt("OturumSayisi",1);
-            PlayerPrefs.DeleteKey("FirstTime");
+            PlayerPrefs.SetInt("FirstTime", 1);
         }
         else
         {
@@ -63,13 +63,26 @@ public class SceneTransitionManager : MonoBehaviour
         PlayerPrefs.Save();
         //StartCoroutine(gameChoice());
 
-        //StartCoroutine(HandleSceneTransitionsA());
+        StartCoroutine(HandleSceneTransitionsA());
         //gameSelection=true;
         //StartCoroutine(HandleSceneTransitionsB());
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        gameSelection = false;
+        //StartCoroutine(DemoA());
+        //demo = true;
+        //StartCoroutine(dataTest());
+=======
+>>>>>>> Stashed changes
         //gameSelection = false;
         //StartCoroutine(DemoA());
         //demo = true;
         StartCoroutine(dataTest());
+<<<<<<< Updated upstream
+=======
+>>>>>>> 3daa90f32dd1895c5d50ff3d28aee09aa222b38a
+>>>>>>> Stashed changes
 
     }
 
